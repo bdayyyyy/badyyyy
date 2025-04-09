@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Darling!</title>
+  
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body {
+          font-family: 'Quicksand', sans-serif;
+          margin: 0;
+          padding: 0;
+          min-height: 100vh;
+          background-color: #fff;
+        }
+        
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem;
+        }
+        
+        .font-quicksand { font-family: 'Quicksand', sans-serif; }
+        .font-dancing-script { font-family: 'Dancing Script', cursive; }
+        .font-pacifico { font-family: 'Pacifico', cursive; }
+        .font-lora { font-family: 'Lora', serif; }
+        
+        .fade-in { animation: fadeIn 1.5s ease-in-out; }
+        .slide-up { animation: slideUp 1s ease-out; }
+        .bounce { animation: bounce 1s ease-in-out; }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+          from { transform: translateY(30px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes bounce {
+          0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+          40% { transform: translateY(-20px); }
+          60% { transform: translateY(-10px); }
+        }
+        
+        .hearts-bg {
+          background-color: #fff;
+          background-image: 
+            radial-gradient(#ff758f33 20%, transparent 20%),
+            radial-gradient(#ff758f33 20%, transparent 20%);
+          background-size: 20px 20px;
+          background-position: 0 0, 10px 10px;
+        }
+        
+        .balloons-bg {
+          background-color: #fff;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ff758f' fill-opacity='0.2'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zm0 0c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10c0 5.523 4.477 10 10 10s10-4.477 10-10-4.477-10-10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .stars-bg {
+          background-color: #fff;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ff758f' fill-opacity='0.2'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .confetti-bg {
+          background-color: #fff;
+          background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ff758f' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .header {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+          font-size: 3rem;
+          color: #f472b6;
+          margin-bottom: 0.5rem;
+          font-family: 'Dancing Script', cursive;
+        }
+        
+        .header p {
+          font-size: 1.25rem;
+          color: #333;
+        }
+        
+        .bg-love-secondary { background-color: #f472b6; }
+        .bg-love-accent { background-color: #fda4af; }
+        .bg-opacity-20 { opacity: 0.2; }
+        .bg-opacity-30 { opacity: 0.3; }
+        
+        .footer {
+          text-align: center;
+          margin-top: 2rem;
+          padding: 1.5rem;
+          background-color: rgba(255, 255, 255, 0.7);
+          border-radius: 0.75rem;
+        }
+        
+        .footer p {
+          margin: 0.5rem 0;
+        }
+        
+        .footer .signature {
+          font-family: 'Dancing Script', cursive;
+          font-size: 1.5rem;
+          color: #f472b6;
+        }
+      </style>
+    
+</head>
+<body class="balloons-bg">
+  <div class="container">
+    <div class="header">
+      <h1>Happy Birthday, My Darling!</h1>
+      <p>OMG MY BABY IS TURNING 19 ONLY ONE MORE YEAR FOR HER AGE TO START WITH A 2.</p>
+    </div>
+    
+    
+        <div class="section fade-in font-dancing-script my-12 p-6 rounded-xl bg-white bg-opacity-70 shadow-lg">
+          <h2 class="text-2xl md:text-3xl text-center mb-4 font-bold text-pink-600">MY BABYYYYY, MY LOVEEEE</h2>
+          <div class="content text-lg whitespace-pre-wrap">
+            HAPPY BIRTHDAY TO MY BEAUTIFUL, CUTE, PRETTY, HOT, SEXY, GORGEOUS, AMAZING GIRLFRIEND(soon-to-be wife) I LOVE YOU SO MUCHHHHHHHH<br><br>IM SO HAPPY IM W YOU I LOVE YOU SO MUCH BRO YOU ARE MY EVERYTHING IM SO HOUNRED TO BE YOUR BOYFRIEND<br><br>ik youll make your parents proud dw about it , you are an amazing daughter, an amaznig girlfriend and an amazing sister you are such really good rolemodel to for them. im so proud of you baby i love you so much<br><br>OMGOGMGOMGO I LOVE YOU SO MUCHHHHHHHH OMG I CANT SAY IT ENOUGH I LOVE YOU SO MUCHHH
+          </div>
+        </div>
+      
+    
+      <div class="memories my-12 p-6 rounded-xl bg-white bg-opacity-70 shadow-lg">
+        <h2 class="text-2xl md:text-3xl text-center mb-8 font-bold text-pink-600">Our Journey Together</h2>
+        <div class="timeline">
+          
+              <div class="memory-item flex flex-row my-8">
+                <div class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white z-10">
+                  <span>❤️</span>
+                </div>
+                <div class="flex-1 ml-6 p-4 rounded-lg bg-white shadow-md">
+                  <div class="date text-sm text-gray-500">2024-12-26</div>
+                  <h3 class="text-xl text-pink-600 font-medium mb-2">WE BACKKKKKKK</h3>
+                  <p>WEDIDIT, WE ARE BETTER THAN EVER I LOVE YOU SO MUCH IM SO HAPPY TO BE WITH YOU</p>
+                </div>
+              </div>
+            
+              <div class="memory-item flex flex-row-reverse my-8">
+                <div class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white z-10">
+                  <span>❤️</span>
+                </div>
+                <div class="flex-1 mr-6 p-4 rounded-lg bg-white shadow-md">
+                  <div class="date text-sm text-gray-500">2024-01-07</div>
+                  <h3 class="text-xl text-pink-600 font-medium mb-2">OUR FIRST KISS</h3>
+                  <p>HAH LOSER I MADE THE FIRST MOVE I KISSED YOU FIRST ON THE LIPS AND MADE SURE YOU DIDNT RELATE TO THE REEL</p>
+                </div>
+              </div>
+            
+              <div class="memory-item flex flex-row my-8">
+                <div class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white z-10">
+                  <span>❤️</span>
+                </div>
+                <div class="flex-1 ml-6 p-4 rounded-lg bg-white shadow-md">
+                  <div class="date text-sm text-gray-500">2023-12-31</div>
+                  <h3 class="text-xl text-pink-600 font-medium mb-2">OUR FIRST MOVEEEE</h3>
+                  <p>YOU kissed my CHEEKS and i held your hand and then later i tried to hold your leg and our hands intertwined, snuggled up and slept so nicely</p>
+                </div>
+              </div>
+            
+        </div>
+      </div>
+    
+    
+      <div class="countdown my-12 p-6 rounded-xl bg-white bg-opacity-70 shadow-lg">
+        <h2 class="text-2xl md:text-3xl text-center mb-6 font-bold text-pink-600">Countdown to Your Big Day!</h2>
+        <div class="countdown-display text-center">
+          <p class="text-xl mb-4">Your birthday is on April 12, 2025</p>
+          <div id="countdown" class="grid grid-cols-4 gap-4 max-w-md mx-auto">
+            <div class="text-center bg-pink-500 rounded-lg p-3 shadow-md">
+              <div id="days" class="text-2xl font-bold text-white">--</div>
+              <div class="text-white font-medium">Days</div>
+            </div>
+            <div class="text-center bg-pink-500 rounded-lg p-3 shadow-md">
+              <div id="hours" class="text-2xl font-bold text-white">--</div>
+              <div class="text-white font-medium">Hours</div>
+            </div>
+            <div class="text-center bg-pink-500 rounded-lg p-3 shadow-md">
+              <div id="minutes" class="text-2xl font-bold text-white">--</div>
+              <div class="text-white font-medium">Minutes</div>
+            </div>
+            <div class="text-center bg-pink-500 rounded-lg p-3 shadow-md">
+              <div id="seconds" class="text-2xl font-bold text-white">--</div>
+              <div class="text-white font-medium">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="wishes my-12 p-6 rounded-xl bg-white bg-opacity-70 shadow-lg">
+        <h2 class="text-2xl md:text-3xl text-center mb-6 font-bold text-pink-600">Birthday Wishes For You</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+              <div class="p-4 rounded-lg bg-love-secondary bg-opacity-30 shadow-sm">
+                <p class="text-lg italic">omg i cant wait to meet you</p>
+              </div>
+            
+              <div class="p-4 rounded-lg bg-love-accent bg-opacity-20 shadow-sm">
+                <p class="text-lg italic">i cant wait for you to come here and for us to live together</p>
+              </div>
+            
+              <div class="p-4 rounded-lg bg-love-secondary bg-opacity-30 shadow-sm">
+                <p class="text-lg italic">idk what else to say except</p>
+              </div>
+            
+              <div class="p-4 rounded-lg bg-love-accent bg-opacity-20 shadow-sm">
+                <p class="text-lg italic">I LOVE</p>
+              </div>
+            
+              <div class="p-4 rounded-lg bg-love-secondary bg-opacity-30 shadow-sm">
+                <p class="text-lg italic">YOU SO MUCH</p>
+              </div>
+            
+              <div class="p-4 rounded-lg bg-love-accent bg-opacity-20 shadow-sm">
+                <p class="text-lg italic">PUNYAHSREE</p>
+              </div>
+            
+        </div>
+      </div>
+    
+    
+      <div class="footer">
+        <p>All my love, today and always 💖</p>
+        <p class="signature">Forever yours</p>
+      </div>
+    
+  </div>
+  
+  
+      <script>
+        // Countdown functionality
+        function updateCountdown() {
+          const birthdayDate = new Date("2025-04-12T00:00:00");
+          const currentDate = new Date();
+          const difference = birthdayDate - currentDate;
+          
+          if (difference > 0) {
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((difference / 1000 / 60) % 60);
+            const seconds = Math.floor((difference / 1000) % 60);
+            
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+          } else {
+            document.getElementById('countdown').innerHTML = "<div class='text-2xl text-pink-600 col-span-4'>Happy Birthday! 🎉</div>";
+          }
+        }
+        
+        // Update the countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      </script>
+    
+</body>
+</html>
+      
